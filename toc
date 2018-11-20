@@ -1,0 +1,63 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="discovery-icp" audience="service" href="/docs/services/discovery-icp/index.html" path="services/discovery-icp"}
+Watson Assistant Discovery Extension for IBM Cloud Private
+
+    {: .navgroup id="learn"}
+    index.md
+    getting-started.md 
+    getting-started-tool.md
+    getting-started-query.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    install.md
+    building.md
+    adding-content.md
+
+    {: topicgroup}
+    Building queries
+        using.md
+        query-parameters.md
+        query-operators.md
+        query-aggregations.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API Reference](https://console.bluemix.net/apidocs/discovery-icp)
+
+    {: topicgroup}
+    Whitepapers
+        [Discovery Cloud architecture](http://ibm.biz/discovery_advantage_paper)
+        [Discovery Whitepaper](https://www.ibm.com/watson/whitepaper/discovery/)
+
+    query-reference.md
+    information-security.md
+    additional-resources.md
+
+    {: .topicgroup}
+    Watson SDKs
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Ruby SDK](https://github.com/watson-developer-cloud/ruby-sdk)
+        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
+        [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk/)
+        [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    troubleshooting.md
+
+    {: .topicgroup}
+    Developer community
+        [StackOverflow](http://stackoverflow.com/questions/tagged/watson-discovery)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/watson-discovery/)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
