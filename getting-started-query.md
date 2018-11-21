@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-17"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -45,15 +45,15 @@ If your query does not return any matching results, and you think it should, try
 
 ## Step 2: Build a basic query
 
-Let's start out by writing a query that will find the concept `Cloud computing` in your collection:
+Let's start out by writing a query that will find the text `cloud` in your collection:
 
 1.  Click on the build queries icon ![Query icon](images/search_icon.svg)<!-- {width="20" height="20" style="padding-left:5px;padding-right:5px;"} --> to open the query page. Select the collection that contains the {{site.data.keyword.IBM_notm}} Press Releases and click **Get started**.
 1.  On the **Build queries** screen, click **Search for Documents**, then **Use the Discovery Query Language** then:
-    - Click the **Field** drop-down and choose `enriched_text.keywords.text`, for the **Operator** choose `contains`, then enter the **Value** of `cloud`. The query `enriched_text.keywords.text:cloud` is displayed under the **Visual Query Builder**.
+    - Click the **Field** drop-down and choose `text`, for the **Operator** choose `contains`, then enter the **Value** of `cloud`. The query `text:cloud` is displayed under the **Visual Query Builder**.
 
-    - Alternatively, you can click **Edit in query language**, then **Use the Discovery Query Language**. Enter `enriched_text.keywords.text:"cloud"` into the **Enter query here** field.
+    - Alternatively, you can click **Edit in query language**, then **Use the Discovery Query Language**. Enter `text:"cloud"` into the **Enter query here** field.
 
-1.  Click **Run query**. There should be one match (`"matching_results": 1`). Copy the **Query URL** at the top of the **Summary** or **JSON** tab to use in your application.
+1.  Click **Run query**. Copy the **Query URL** at the top of the **Summary** or **JSON** tab to use in your application.
 
 If you'd like to check out a few pre-built queries, click the **Use a sample query** button.
 {: tip}
@@ -62,55 +62,37 @@ If you'd like to check out a few pre-built queries, click the **Use a sample que
 
 Try out these queries:
 
-To return all documents that have a `positive` sentiment: Click **Search for Documents**, **Use the Discovery Query Language** then:
--  Click the **Field** drop-down and choose `enriched_text.sentiment.document.label`, for the **Operator** choose `contains`, then enter the **Value** of `positive`.  
+To return all documents that do not contain the word `Watson`: Click **Search for Documents**, **Use the Discovery Query Language** then:
+-  Click the **Field** drop-down and choose `text`, for the **Operator** choose `does not contain`, then enter the **Value** of `Watson`.
 
-   The query `enriched_text.sentiment.document.label:positive` will display under the **Visual Query Builder**.
+The query `text:!Watson` will display under the **Visual Query Builder**. The operator `:!` specifies "does not contain".
 
-To return all documents in the `health and fitness` category: Click **Search for Documents**, **Use the Discovery Query Language** then:
--  Click the **Field** drop-down and choose `enriched_text.categories.label`, for the **Operator** choose `is`, then enter the **Value** of `"health and fitness"`.
+To return documents that exactly match a specific field; for example, to return documents with the file name `test-doc2.html` : Click **Search for Documents**, **Use the Discovery Query Language** then:
+-  Click the **Field** drop-down and choose `extracted_metadata.filename`, for the **Operator** choose `is`, then enter the **Value** of `"test-doc2.html"`.
 
-   The query `enriched_text.categories.label::"health and fitness"` will display under the **Visual Query Builder**. The operator `::` specifies an exact match.
+   The query `extracted_metadata.filename::"test-doc2.html"` will display under the **Visual Query Builder**. The operator `::` specifies an exact match.
 
-To return all documents that contain the entity `IBM`, but not the entity `Watson`: Click **Search for Documents**, **Use the Discovery Query Language** then:
--  Click the **Field** drop-down and choose `enriched_text.entities.text`, for the **Operator** choose `contains`, then enter the **Value** of `IBM`. Click **Add rule**, then for the **Field** choose `enriched_text.entities.text`, for the **Operator** choose `does not contain`, then enter the **Value** of `Watson`.
+To return all documents that contain `IBM`, but not `Watson`: Click **Search for Documents**, **Use the Discovery Query Language** then:
+-  Click the **Field** drop-down and choose `text`, for the **Operator** choose `contains`, then enter the **Value** of `IBM`. Click **Add rule**, then for the **Field** choose `text`, for the **Operator** choose `does not contain`, then enter the **Value** of `Watson`.
 
-   The query `enriched_text.entities.text:IBM,enriched_text.entities.text:!Watson` will display under the **Visual Query Builder**. The operator `:!` specifies "does not contain".
+   The query `text:IBM,text:!Watson` will display under the **Visual Query Builder**. The operator `,` specifies "and".
 
 ## Step 4: Build a combined query
 
-You can combine query parameters together to build more targeted queries. Let's try using both the `filter` and `query` parameters to return documents about {{site.data.keyword.IBM_notm}} acquisitions. The filter parameter will narrow down the results to only documents that mention `IBM`, and then the query parameter will return all results about `acquisitions`,in order of relevance.
+You can combine query parameters together to build more targeted queries. Let's try using both the `filter` and `query` parameters to return documents. The filter parameter will narrow down the results to only documents that mention `IBM`, and then the query parameter will return all results about `world wide web`,in order of relevance.
 
 1.  Click on the build queries icon ![Query icon](images/search_icon.svg)<!-- {width="20" height="20" style="padding-left:5px;padding-right:5px;"} --> to open the query page. Select the collection that contains the {{site.data.keyword.IBM_notm}} Press Releases and click **Get started**.
 
 1.  Under **Filter which documents you query**:
-    -  Click the **Field** drop-down and choose `enriched_text.entities.text`, for the **Operator** choose `contains`, then enter the **Value** of `IBM`.
+    -  Click the **Field** drop-down and choose `text`, for the **Operator** choose `contains`, then enter the **Value** of `IBM`.
 
-       The query `enriched_text.entities.text:IBM` will narrow down the documents to only those that mention the entity `IBM`.
+       The query `text:IBM` will narrow down the documents to only those that mention `IBM`.
 
 1.  Under **Search for Documents**, click **Use the Discovery Query Language**, then:
-    -  Click the **Field** drop-down and choose `enriched_text.concepts.text`, for the **Operator** choose `contains`, then enter the **Value** of `world wide web`.
+    -  Click the **Field** drop-down and choose `text`, for the **Operator** choose `contains`, then enter the **Value** of `world wide web`.
 
-       The query `enriched_text.concepts.text:"world wide web"` will return all documents that include the concept of `world wide web`, and those documents will be ranked in order of relevance.
+       The query `text:"world wide web"` will return all documents that include `world wide web`, and those documents will be ranked in order of relevance.
 
 1.  Click **More options**, then **Fields to return** and choose **Specify**. Select `text`. This will limit the response to the text of the relevant articles and exclude everything else.
 
 1.  Click **Run query**. There will be one matching document: `"matching_results": 1`
-
-## Step 5: Building an aggregation
-
-Aggregations return a set of data values; for example, top keywords, overall sentiment of entities, and more.
-
-Try building this aggregation - it will return the top 10 concepts in the {{site.data.keyword.IBM_notm}} press releases collection.
-
-1.  Click on the build queries icon ![Query icon](images/search_icon.svg)<!-- {width="20" height="20" style="padding-left:5px;padding-right:5px;"} --> to open the query page. Select the collection that contains the {{site.data.keyword.IBM_notm}} Press Releases and click **Get started**.
-
-1.  Under **Include analysis of your results**:
-    -  Click the **Output** drop-down and choose `Top values`, for the **Field** choose `enriched_text.concepts.text`, then enter the **Count** of `10`.
-
-       `Term` retursn the most common values for the `concepts` `text` field. **Count** specifies the number of results that you want to be returned. The query `term(enriched_text.concepts.text,count:10)` is displayed under the **Visual Query Builder**.   
-
-1.  Click **More options**, then enter `0` in the **Number of documents to return** field.
-
-1.  Click **Run query**. The top 10 concepts are displayed in both the **Summary** and **JSON** tabs.
-
