@@ -25,7 +25,7 @@ Watson Assistant Discovery Extension for IBM Cloud Private
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API Reference](https://console.bluemix.net/apidocs/discovery-icp)
+    [API reference](https://cloud.ibm.com/apidocs/discovery-icp)
 
     {: topicgroup}
     Whitepapers

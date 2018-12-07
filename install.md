@@ -279,7 +279,7 @@ If you do not want to install from the catalog, you can install from the command
 1.  After you specify your Docker image registry details, you can install the chart from the Helm command line interface. Enter the following command from the directory where the package was loaded in your local system:
 
     ```bash
-    helm install --name {my_release} ibm-watson-discovery-prod --set global.icpDockerRepo="{cluster_CA_domain}:8500/{namespace>}"
+    helm install --name {my_release} ibm-watson-discovery-prod --set global.icpDockerRepo="{cluster_CA_domain}:8500/{namespace} --set license=accept"
     ```
     {: codeblock}
 
