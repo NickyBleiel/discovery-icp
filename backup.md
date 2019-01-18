@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-18"
 
 ---
 
@@ -176,7 +176,7 @@ Perform the following steps to back up and restore the `postgres` service.
     ```
     {: codeblock}
     
-    In lines 3 and 4 of the script, be sure to set the appropriate values for `<prev_deployment_name>` and `<new_deployment_name>`.
+    In lines 3 and 4 of the script, set the appropriate values for `<prev_deployment_name>` and `<new_deployment_name>`. Note that you provide the same values when running the script in Step 6.
   1. Make the script executable by running the following command:
      ```bash
      chmod +x pgBackup.sh
