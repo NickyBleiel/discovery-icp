@@ -178,9 +178,15 @@ Perform the following steps to back up and restore the `postgres` service.
     
     In lines 3 and 4 of the script, be sure to set the appropriate values for `<prev_deployment_name>` and `<new_deployment_name>`.
   1. Make the script executable by running the following command:
-     `chmod +x pgBackup.sh`
+     ```bash
+     chmod +x pgBackup.sh
+     ```
+     {: pre}
   1. Run the `pgBackup.sh` script and specify the name of the original Postgres deployment you are backing up and the name of the new Postgres deployment to which you are restoring the data:
-     `./pgBackup.sh -p <prev_deployment_name> -n <new_deployment_name>`
+     ```bash
+     ./pgBackup.sh -p <prev_deployment_name> -n <new_deployment_name>
+     ```
+     {: pre}
   1. The script generates a `pgDumpOutput` file in the current directory. The `pgDumpOutput` file contains the abbreviated output from the Postgres `pg_dumpall` command and an `outputToRestore` file that contains only the values from the data dump that need be restored.
     
 ### Restoring the Postgres service
