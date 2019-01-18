@@ -22,6 +22,8 @@ Watson Assistant Discovery Extension for IBM Cloud Private
         query-parameters.md
         query-operators.md
         query-aggregations.md
+        
+    backup.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
