@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-20"
+  years: 2018, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -132,7 +132,7 @@ Add the {{site.data.keyword.dcp_short}} Helm chart to the {{site.data.keyword.ic
 1.  If you have not, log in to your cluster from the IBM Cloud Private CLI and log in to the Docker private image registry.
 
     ```bash
-    cloudctl login -a https://{cluster_CA_domain}:8443 --skip-ssl-validation
+    cloudctl login -a https://{cluster_CA_domain}/{deployment_name}:8443 --skip-ssl-validation
     ```
     ```bash
     docker login {icp-url}:8500
@@ -170,7 +170,7 @@ You must be a cluster administrator to create local storage volumes.
 
     If you do not have the Kubernetes command line tool set up, complete the steps in [Prepare the cloud environment](#install-icp).
 
-1.  Get a certificate from your {{site.data.keyword.icpfull_notm}} cluster and install it to Docker or add the {cluster_CA_domain} as a Docker Daemon insecure registry. You must do one or the other for Docker to be able to pull from your {{site.data.keyword.icpfull_notm}} cluster.
+1.  Get a certificate from your {{site.data.keyword.icpfull_notm}} cluster and install it to Docker or add the {cluster_CA_domain}/{deployment_name} as a Docker Daemon insecure registry. You must do one or the other for Docker to be able to pull from your {{site.data.keyword.icpfull_notm}} cluster.
 
     See [Specifying your own certificate authority (CA) for IBM Cloud Private services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/installing/create_ca_cert.html)
 
@@ -279,12 +279,12 @@ If you do not want to install from the catalog, you can install from the command
 1.  After you specify your Docker image registry details, you can install the chart from the Helm command line interface. Enter the following command from the directory where the package was loaded in your local system:
 
     ```bash
-    helm install --name {my_release} ibm-watson-discovery-prod --set global.icpDockerRepo="{cluster_CA_domain}:8500/{namespace} --set license=accept"
+    helm install --name {my_release} ibm-watson-discovery-prod --set global.icpDockerRepo="{cluster_CA_domain}/{deployment_name}:8500/{namespace} --set license=accept"
     ```
     {: codeblock}
 
     - Replace `{my_release}` with a name for your release.
-    - Replace `{cluster_CA_domain}` with your ICP domain.
+    - Replace `{cluster_CA_domain}/{deployment_name}` with your ICP domain.
     - Replace `{namespace}` with the release's namespace.
     - The `ibm-watson-discovery-prod` parameter represents the name of the Helm chart.
 

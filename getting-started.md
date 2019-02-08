@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-17"
+  years: 2015, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -50,7 +50,7 @@ This tutorial uses an API key to authenticate. For production uses, make sure th
 1. Issue a call to the `GET /v1/environments` method to retrieve the status of  environments. Replace `{apikey}` with your information:
 
     ```bash
-    curl -u "apikey":"{apikey}" "https://{cluster_CA_domain}/discovery/api/v1/environments?version=2018-08-01"
+    curl -u "apikey":"{apikey}" "https://{cluster_CA_domain}/{deployment_name}/discovery/api/v1/environments?version=2018-08-01"
     ```
     {: pre}
     
@@ -84,7 +84,7 @@ Now that the environment is ready, you can create a collection. Think of a colle
 1.  You need the ID of your default configuration first. To find your default `configuration_id`, use the `GET /v1/environments/{environment_id}/configurations` method. Replace `{apikey}` and `{environment_id}` with your information:
 
     ```bash
-      curl -u "apikey":"{apikey}" https://{cluster_CA_domain}/discovery/api/v1/environments/{environment_id}/configurations?version=2018-08-01
+      curl -u "apikey":"{apikey}" https://{cluster_CA_domain}/{deployment_name}/discovery/api/v1/environments/{environment_id}/configurations?version=2018-08-01
     ```
     {: pre}
 1.  Use the `POST /v1/environments/{environment_id}/collections` method to create a collection called **my-first-collection**. Replace `{apikey}`, `{environment_id}` and `{configuration_id}` with your information:
@@ -99,7 +99,7 @@ Now that the environment is ready, you can create a collection. Think of a colle
     - Issue a call to the `GET /v1/environments/{environment_id}/collections/{collection_id}` method to retrieve the status of your collection.  Again, Replace `{apikey}`, `{environment_id}`, and `{configuration_id}` with your information:
 
     ```bash
-    curl -u "apikey":"{apikey}" https://{cluster_CA_domain}/discovery/api/v1/environments/{environment_id}/collections/{collection_id}?version=2018-08-01
+    curl -u "apikey":"{apikey}" https://{cluster_CA_domain}/{deployment_name}/discovery/api/v1/environments/{environment_id}/collections/{collection_id}?version=2018-08-01
     ```
     {: pre}
 
@@ -117,7 +117,7 @@ Download these sample documents: <a target="_blank" href="https://watson-develop
     - Use the `POST /v1/environments/{environment_id}/collections/{collection_id}/documents` method:
 
         ```bash
-        curl -X POST -u "apikey":"{apikey}" -F "file=@test-doc1.html" https://{cluster_CA_domain}/discovery/api/v1/environments/{environment_id}/collections/{collection_id}/documents?version=2018-08-01
+        curl -X POST -u "apikey":"{apikey}" -F "file=@test-doc1.html" https://{cluster_CA_domain}/{deployment_name}/discovery/api/v1/environments/{environment_id}/collections/{collection_id}/documents?version=2018-08-01
         ```
         {: pre}
 
@@ -125,12 +125,9 @@ Download these sample documents: <a target="_blank" href="https://watson-develop
     - Java:
 
       ```java
-      Discovery discovery = new Discovery("2018-08-01");
-      discovery.setEndPoint("https://{cluster_CA_domain}/discovery/api/v1");
-      IamOptions options = new IamOptions.Builder()
-        .apiKey("{apikey}")
-        .build();
-      discovery.setIamCredentials(options);
+      Discovery service = new Discovery("2017-11-07");
+      service.setUsernameAndPassword("apikey","{api_key}");
+      service.setEndPoint("https://{icp_cluster_host}:{port}/discovery/api");
       HttpConfigOptions options = new HttpConfigOptions.Builder()
         .disableSslVerification(true)
         .build();
@@ -196,7 +193,7 @@ Finally, use the `GET /v1/environments/{environment_id}/collections/{collection_
 The following example returns all keywords that are match **cloud**. Replace `{apikey}`, `{environment_id}`, and `{configuration_id}` with your information:
 
 ```bash
-curl -u "apikey":"{apikey}" 'https://{cluster_CA_domain}/discovery/api/v1/environments/{environment_id}/collections/{collection_id}/query?version=2018-08-01&query=text:"IBM"'
+curl -u "apikey":"{apikey}" 'https://{cluster_CA_domain}/{deployment_name}/discovery/api/v1/environments/{environment_id}/collections/{collection_id}/query?version=2018-08-01&query=text:"IBM"'
 ```
 {: pre}
 

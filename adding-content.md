@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-17"
+  years: 2015, 2019
+lastupdated: "2018-01-11"
 
 ---
 
@@ -37,8 +37,8 @@ Consider the following when you are ready to add documents to your collection:
 -   The sample documents are not automatically added to the collection. You must add them if you want them as part of your collection.
 -   Only the first 50,000 characters of each JSON field selected for enrichment will be enriched.
 -   When creating a collection, you select the document language (English is the default). See [Language support](/docs/services/discovery-icp/language-support.html) for the list of languages. Your documents will be enriched in the selected language. Do not mix languages within the same collection.
--   You can add Microsoft Word, HTML, and JSON documents to your collection.
--   The documents in your collection will be converted using the configuration file provided, which is named Default Configuration, unless you choose a different configuration file. For information about creating a configuration file, see [Custom configuration](/docs/services/discovery-icp/building.html#custom-configuration).
+-   You can add Microsoft Word, HTML and XHTML, and JSON documents to your collection. Other document types, including PDF and XML, are not supported.
+-   The documents in your collection are converted using the configuration file provided, which is named **Default Configuration**, unless you choose a different configuration file. For information about creating a configuration file, see [Custom configuration](/docs/services/discovery-icp/building.html#custom-configuration).
 -   When documents are uploaded to a data collection, they are converted and enriched using the configuration file chosen for that collection. If you decide later that you would like to switch a collection to a different configuration file, you can do that, but the documents that have already been uploaded will remain converted by the original configuration file. All documents uploaded after switching the configuration file will use the new configuration file. If you want the **entire** collection to use the new configuration, you will need to create a new collection, choose that new configuration file, and re-upload all the documents.
 -   You cannot specify the `data type` (For example: `text` or `date`) of fields. During document ingestion, if a field is detected that does not yet exist in the index, {{site.data.keyword.dcp_short}} will automatically detect the `data type` of that field based on the value of the field for the first document indexed.
 -   A document can fail to be ingested because of a type mismatch between data in the current document and similar data in a previously ingested document. For example, a field might be typed as a `date` in one document and a `string` in a subsequent document, preventing the subsequent document from being indexed correctly.

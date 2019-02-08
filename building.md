@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-01-10"
 
 ---
 
@@ -51,7 +51,7 @@ To create an environment and private data collection with the {{site.data.keywor
 
 1.  After your environment is ready, click the **Upload your own data** button, then you can **Name your new collection**.
 
-    By default, the configuration file is **Default Configuration**. If you have another configuration file available, you can select it, or you can create a new one later and apply it to this collection. After you click **Create**, your data collection appears as a tile.
+    By default, the configuration file is **Default Configuration**. If you have another configuration file available, you can select it, or you can create a new one later and apply it to this collection. You can also select the language of the documents you plan to add to this collection: English (`en`), German (`de`), Spanish (`es`), Arabic (`ar`), Japanese (`ja`), French (`fr`), Italian (`it`), Korean (`ko`), Dutch (`nl`), Chinese (`zh`), or Brazilian Portuguese (`pt-br`). There can be only one language in each of your collections. After you click **Create**, your data collection appears as a tile.
 
 Your environment and data collection are ready! If you want to use the default configuration file, you can start [Adding content](/docs/services/discovery-icp/adding-content.html) immediately. If you want to customize your {{site.data.keyword.dcp_short}} configuration with conversion settings, do not begin adding documents right now; instead, start creating your [custom configuration file](/docs/services/discovery-icp/building.html#custom-configuration).
 

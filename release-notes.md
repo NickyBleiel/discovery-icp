@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-20"
+  years: 2015, 2019
+lastupdated: "2019-02-08"
 
 ---
 
@@ -45,6 +45,30 @@ IBM will release services, features, and language support that are classified as
 
 The following new features and changes to the service are available.
 
+## 1.0.1, 8 February 2018
+
+Version 1.0.1 includes the following changes and updates:
+
+ - An implementation to back up and restore your data. For more information, see [Backing up and restoring data](/docs/services/discovery-icp/backup.html#).
+ 
+ - {{site.data.keyword.dcp_short}} is now available in the following 11 languages:
+   - Arabic (`ar`)
+   - Brazilian Portuguese (`pt-br`)
+   - Chinese (`zh`)
+   - Dutch (`nl`)
+   - English (`en`)
+   - French (`fr`)
+   - German (`de`)
+   - Italian (`it`)
+   - Japanese (`ja`)
+   - Korean (`ko`)
+   - Spanish (`es`)
+   
+  Although the service supports these languages for collections and queries, Natural Language Understanding (NLU) enhancements are available only in English (`en`) at the current time.
+  {: important}
+  
+  - Support for IBM Cloud Private for Data.
+
 ## 1.0.0 (General Availability release), 20 November 2018
 {: #20-nov-2018}
 
@@ -65,6 +89,7 @@ The following known issues apply to the GA release:
 
   - {{site.data.keyword.icpfull_notm}} 3.1.1 and later are not currently supported.
   - The [API Reference](https://console.bluemix.net/apidocs/discovery-icp) lists methods and parameters that are not currently available on {{site.data.keyword.dcp_short}}. The preceding section lists the supported method endpoints.
+    Additionally, the [API Reference](https://console.bluemix.net/apidocs/discovery-icp) lists `curl` API paths 
   - {{site.data.keyword.dcp_short}} is currently available only in English (`en`). Some parts of the {{site.data.keyword.dcp_short}} interface, including the tooling, might appear to support non-English languages. If you find a reference to non-English support, disregard it.
   - Disregard references to natural language query in the {{site.data.keyword.dcp_short}} tooling. If you submit a natural language query, the service processes it as a Discovery Query Language request. The results returned by a natural language query are indeterminable.
   - Disregard references to Watson Discovery News in the {{site.data.keyword.dcp_short}} tooling.
@@ -84,7 +109,7 @@ The the {{site.data.keyword.dcp_short}} service uses IAM access tokens. When you
     ```bash
     curl -X GET
     --header "Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs"
-    "https://{cluster_CA_domain}/discovery/api/v1/environments?version=2018-08-01"
+    "https://{cluster_CA_domain}/{deployment_name}/discovery/api/v1/environments?version=2018-08-01"
     ```
     {: pre}
 
