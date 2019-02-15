@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-17"
+  years: 2015, 2019
+lastupdated: "2019-02-15"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-11-17"
 # Query parameters
 {: #query-parameters}
 
-The {{site.data.keyword.dcp_long}} service offers powerful content search capabilities through queries. After your content is uploaded and enriched by the {{site.data.keyword.dcp_short}} service, you can build queries, integrate {{site.data.keyword.dcp_short}} into your own projects, or create a custom application by using the {{site.data.keyword.watson}} Explorer Application Builder. To get started with queries, see [Query concepts](/docs/services/discovery-icp/using.html). For the complete list of parameters, see the [Query reference](/docs/services/discovery-icp/query-reference.html#parameter-descriptions).
+The {{site.data.keyword.dcp_long}} service offers powerful content search capabilities through queries. After your content is uploaded and enriched by the {{site.data.keyword.dcp_short}} service, you can build queries, integrate {{site.data.keyword.dcp_short}} into your own projects, or create a custom application by using the {{site.data.keyword.watson}} Explorer Application Builder. To get started with queries, see [Query concepts](/docs/services/discovery-icp/using.html#query-concepts). For the complete list of parameters, see the [Query reference](/docs/services/discovery-icp/query-reference.html#parameter-descriptions).
 {: shortdesc}
 
 **Search parameters**
@@ -34,12 +34,12 @@ The **results set** is the group of documents identified by the combined searche
 ## query
 {: #query}
 
-A query search returns all documents in your data set with full enrichments and full text in order of relevance. A query also excludes any documents that do not mention the query content. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html).
+A query search returns all documents in your data set with full enrichments and full text in order of relevance. A query also excludes any documents that do not mention the query content. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html#query-operators).
 
 ## filter
-{: #filter}
+{: #filter-query-params}
 
-A cacheable query that excludes any documents that do not mention the query content. Filter search results are **not** returned in order of relevance. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html)
+A cacheable query that excludes any documents that do not mention the query content. Filter search results are **not** returned in order of relevance. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html#query-operators).
 
 ### Differences between the filter and query parameters
 {: #filtervquery}
@@ -58,7 +58,7 @@ With a simple query, especially on a small data set, `filter` and `query` often 
 ## aggregation
 {: #aggregation}
 
-Aggregation queries return a count of documents matching a set of data values; for example, top keywords. For the full list of aggregation options, see the [Aggregations table](/docs/services/discovery-icp/query-aggregations.html). These aggregations are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html)
+Aggregation queries return a count of documents matching a set of data values; for example, top keywords. For the full list of aggregation options, see the [Aggregations table](/docs/services/discovery-icp/query-aggregations.html#query-aggregations). These aggregations are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html#query-operators).
 
 **Structure parameters**
 

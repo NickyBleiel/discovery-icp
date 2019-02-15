@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -23,6 +23,7 @@ lastupdated: "2019-02-08"
 {: #backup-restore}
 
 Use the following procedures to back up and restore user data in your {{site.data.keyword.dcp_short}} instance.
+{: shortdesc}
 
 The procedures on this page are for advanced users who have experience administering IBM Cloud Private clusters. Backing up and restoring data does not need to be performed as part of standard use or maintenance.
 {: important}

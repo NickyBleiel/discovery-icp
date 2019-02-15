@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-17"
+  years: 2015, 2019
+lastupdated: "2018-02-15"
 
 ---
 
@@ -18,6 +18,7 @@ lastupdated: "2018-11-17"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Query concepts
+{: #query-concepts}
 
 The {{site.data.keyword.dcp_long}} service offers powerful content search capabilities. After your content is uploaded and enriched by the {{site.data.keyword.dcp_short}} service, you can build queries, then integrate {{site.data.keyword.dcp_short}} into your own projects.
 {: shortdesc}
@@ -28,8 +29,8 @@ The {{site.data.keyword.dcp_long}} service offers powerful content search capabi
 When you create a query or filter, {{site.data.keyword.dcp_short}} looks at each result and tries to match the paths you have defined. When matches occur, they are added to the results set. When creating a query, you can be as vague or as specific as you want. The more specific the query, the more targeted the results.
 
 For more information about writing queries, see:
-- [Getting started with querying tutorial](/docs/services/discovery-icp/getting-started-query.html)
-- [Query reference](/docs/services/discovery-icp/query-reference.html) (includes the list of parameters, operators, and aggregations available in the Discovery Query Language)
+- [Getting started with querying tutorial](/docs/services/discovery-icp/getting-started-query.html#)
+- [Query reference](/docs/services/discovery-icp/query-reference.html#query-ref) (includes the list of parameters, operators, and aggregations available in the Discovery Query Language)
 
 ## The Watson Assistant Discovery Extension data schema
 {: #discovery-schema}
@@ -85,7 +86,7 @@ The elements of the query as are follows:
 
 ![Example query structure](images/query_structure2.png)
 
-  Operators that evaluate a field (`<=` , `>=`, `<`, `>`) require a `number` or `date` as the value. Using quotations around a value always makes it a `string`. Therefore `relevance>=0.5` is a valid query and `relevance>="0.5"` is not. See [Query operators](/docs/services/discovery-icp/query-operators.html) for a complete list of operators.
+  Operators that evaluate a field (`<=` , `>=`, `<`, `>`) require a `number` or `date` as the value. Using quotations around a value always makes it a `string`. Therefore `relevance>=0.5` is a valid query and `relevance>="0.5"` is not. See [Query operators](/docs/services/discovery-icp/query-operators.html#query-operators) for a complete list of operators.
   {: tip}
 
 ## Building combined queries
@@ -114,7 +115,7 @@ The elements of the aggregation are as follows:
   - `)`: end grouping
 
 This example aggregation will find all of the `keywords` in your collection.
-The delimiter in this query is `.` and the operator is `()`. See [Query operators](/docs/services/discovery-icp/query-operators.html) to learn about other operators available in the Discovery Query Language.
+The delimiter in this query is `.` and the operator is `()`. See [Query operators](/docs/services/discovery-icp/query-operators.html#query-operators) to learn about other operators available in the Discovery Query Language.
 
 ### Example aggregation queries
 {: #example-aggregations}

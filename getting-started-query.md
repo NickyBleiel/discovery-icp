@@ -18,19 +18,24 @@ lastupdated: "2018-11-20"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Getting started with querying
+{: #query-gs}
 
 In this tutorial, we will learn how to write a few different types of queries in {{site.data.keyword.dcp_short}}.
 {: shortdesc}
 
 For more information about writing queries, see:
-- [Query concepts](/docs/services/discovery-icp/using.html)
-- [Query reference](/docs/services/discovery-icp/query-reference.html) (includes the list of parameters, operators, and aggregations available in the Discovery Query Language)
+- [Query concepts](/docs/services/discovery-icp/using.html#query-concepts)
+- [Query reference](/docs/services/discovery-icp/query-reference.html#query-ref) (includes the list of parameters, operators, and aggregations available in the Discovery Query Language)
 
-These example queries are built by using the {{site.data.keyword.dcp_short}} tooling. If you'd like to use the API instead, add the query parameters to your API call. For more information and examples, see the Queries section of the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/discovery-icp){: new_window}.
+These example queries are built by using the {{site.data.keyword.dcp_short}} tooling. If you'd like to use the API instead, add the query parameters to your API call. For more information and examples, see the Queries section of the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https:/{DomainName}/apidocs/discovery-icp){: new_window}.
 
 ## Before you begin
 
-**Complete the steps in [Getting started](/docs/services/discovery-icp/getting-started-tool.html).** If you haven't completed the **Getting started**, go to the **Manage data** screen, create a new collection named {{site.data.keyword.IBM_notm}} Press Releases, and add these four documents to it: <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc1.html" download>test-doc1.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc2.html" download>test-doc2.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc3.html" download>test-doc3.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc4.html" download>test-doc4.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>
+**Complete the steps in [Getting started](/docs/services/discovery-icp/getting-started-tool.html#gs-tool).** If you haven't completed the **Getting started**, go to the **Manage data** screen, create a new collection named {{site.data.keyword.IBM_notm}} Press Releases, and add these four documents to it:<br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc1.html" download>test-doc1.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc2.html" download>test-doc2.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc3.html" download>test-doc3.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc4.html" download>test-doc4.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>
 
 ## Step 1: Quick tour of the Discovery data schema
 

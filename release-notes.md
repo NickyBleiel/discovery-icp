@@ -45,11 +45,12 @@ IBM will release services, features, and language support that are classified as
 
 The following new features and changes to the service are available.
 
-## 1.0.1, 8 February 2018
+## 1.0.1, 8 February 2019
+{: #08-feb-2019}
 
 Version 1.0.1 includes the following changes and updates:
 
- - An implementation to back up and restore your data. For more information, see [Backing up and restoring data](/docs/services/discovery-icp/backup.html#).
+ - An implementation to back up and restore your data. For more information, see [Backing up and restoring data](/docs/services/discovery-icp/backup.html#backup-restore).
  
  - {{site.data.keyword.dcp_short}} is now available in the following 11 languages:
    - Arabic (`ar`)
@@ -72,9 +73,9 @@ Version 1.0.1 includes the following changes and updates:
 ## 1.0.0 (General Availability release), 20 November 2018
 {: #20-nov-2018}
 
-The {{site.data.keyword.dcp_full}} service brings the cognitive capabilities of the Watson Discovery Service to the {{site.data.keyword.icpfull_notm} platform.
+The {{site.data.keyword.dcp_long}} service brings the cognitive capabilities of the Watson Discovery Service to the {{site.data.keyword.icpfull_notm}} platform.
 
-{{site.data.keyword.dcp_short} includes the following endpoints:
+{{site.data.keyword.dcp_short}} includes the following endpoints:
  - A health check endpoint accessible on `/api/health/check`.
  - Environment endpoints accesible on `/api/v1/environments`.
  - Configuration endpoints accessible on `/api/v1/environments/{environment_id}/configurations`.

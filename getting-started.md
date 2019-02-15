@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-03"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -27,13 +27,13 @@ lastupdated: "2019-01-03"
 In this short tutorial, we introduce the {{site.data.keyword.dcp_short}} API and go through the process of creating a private data collection and searching it.
 {: shortdesc}
 
-If you prefer to work in the {{site.data.keyword.dcp_short}} tooling, see [Getting started with the tooling](/docs/services/discovery-icp/getting-started-tool.html).
+If you prefer to work in the {{site.data.keyword.dcp_short}} tooling, see [Getting started with the tooling](/docs/services/discovery-icp/getting-started-tool.html#gs-tool).
 {: tip}
 
 ## Before you begin
-{: #before-you-begin}
+{: #before-you-begin-api}
 
-You need a service instance to start. An administrator must install the service as described in [Installing and configuring Watson Assistant Discovery Extension](/docs/services/discovery-icp/install.html#install). 
+You need a service instance to start. An administrator must install the service as described in [Installing Watson Assistant Discovery Extension](/docs/services/discovery-icp/install.html#install). 
 
 <!-- Remove the text marked `download` after there's no g-s tab in the catalog dashboard -->
 
@@ -77,7 +77,7 @@ This tutorial uses an API key to authenticate. For production uses, make sure th
 1. Note the `environment_id` value in the second object in the previously listed output. You need this value to issue additional commands.
 
 ## Step 2: Create a collection
-{: #create-a-collection}
+{: #create-a-collection-api}
 
 Now that the environment is ready, you can create a collection. Think of a collection as a box that stores your documents in your environment.
 
@@ -106,7 +106,11 @@ Now that the environment is ready, you can create a collection. Think of a colle
 ## Step 3: Download the sample documents
 {: #download-sample-documents}
 
-Download these sample documents: <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc1.html" download>test-doc1.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc2.html" download>test-doc2.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc3.html" download>test-doc3.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>, and <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc4.html" download>test-doc4.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>.
+Download these sample documents:<br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc1.html" download>test-doc1.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc2.html" download>test-doc2.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc3.html" download>test-doc3.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc4.html" download>test-doc4.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>
 
 **Note:** In some browsers, the preceding links open in a new window instead of saving locally. If this occurs, select `Save As` in your browser's `File` menu to save a copy of the file.
 
@@ -198,9 +202,9 @@ curl -u "apikey":"{apikey}" 'https://{cluster_CA_domain}/{deployment_name}/disco
 {: pre}
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-gs-api}
 
 You successfully queried documents in the environment and collection you created. You can now begin customizing your collection by adding more documents and enrichments, and customizing conversion settings.
 
 - Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.bluemix.net/apidocs/discovery-icp){: new_window}
-- [Configure](/docs/services/discovery-icp/building.html) your service
+- [Configure your service](/docs/services/discovery-icp/building.html#config-service)

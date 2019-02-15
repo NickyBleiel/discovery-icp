@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2018-02-15"
 
 ---
 
@@ -20,13 +20,14 @@ lastupdated: "2018-11-14"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Query reference
+{: #query-ref}
 
 The {{site.data.keyword.dcp_long}} service offers powerful content search capabilities through queries. After your content is uploaded and enriched by the {{site.data.keyword.dcp_short}} service, you can build queries or integrate {{site.data.keyword.dcp_short}} into your own projects.
 {: shortdesc}
 
 For more information about writing queries, see:
-- [Getting started with querying](/docs/services/discovery-icp/getting-started-query.html)
-- [Query concepts](/docs/services/discovery-icp/using.html)
+- [Getting started with querying](/docs/services/discovery-icp/getting-started-query.html#query-gs)
+- [Query concepts](/docs/services/discovery-icp/using.html#query-concepts)
 
 ## Parameters descriptions
 {: #parameter-descriptions}

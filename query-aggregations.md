@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-15"
 
 ---
 
@@ -34,7 +34,7 @@ term(enriched_text.keywords.text,count:10)
 {: codeblock}
 
 ## filter
-{: #filter}
+{: #filter-aggr-query}
 
 A modifier that narrows down the document set of the aggregation query it precedes. This example filters down to the set of documents that include the keyword "cloud".
 

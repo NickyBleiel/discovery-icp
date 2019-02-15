@@ -54,7 +54,7 @@ In addition to the [general hardware requirements and recommendations ![External
   - **Local storage** on [persistent volumes](#create-pvs)
 
 ## Resource requirements
-{: #resources}
+{: #resource-rqts}
 
 | Component | Number of replicas | Disk space per pod | Storage type  |
 |-----------|--------------------|--------------------|---------------|
@@ -303,12 +303,12 @@ If you do not want to install from the catalog, you can install from the command
 1.  Log in using the same credentials you used to log into the {{site.data.keyword.icpfull_notm}} dashboard.
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-install}
 
 Use the {{site.data.keyword.dcp_short}} tool to 
 
-- To learn more about the service first, read the [overview](/docs/services/discovery-icp/index.html).
-- To see how it works for yourself, follow the steps in [Getting started](/docs/services/discovery-icp/getting-started.html).
+- To learn more about the service first, read the [overview](/docs/services/discovery-icp/index.html#wadex-about).
+- To see how it works for yourself, follow the steps in [Getting started](/docs/services/discovery-icp/getting-started.html#gs-api).
 
 
 
