@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -22,7 +24,7 @@ lastupdated: "2019-02-15"
 # Query parameters
 {: #query-parameters}
 
-The {{site.data.keyword.dcp_long}} service offers powerful content search capabilities through queries. After your content is uploaded and enriched by the {{site.data.keyword.dcp_short}} service, you can build queries, integrate {{site.data.keyword.dcp_short}} into your own projects, or create a custom application by using the {{site.data.keyword.watson}} Explorer Application Builder. To get started with queries, see [Query concepts](/docs/services/discovery-icp/using.html#query-concepts). For the complete list of parameters, see the [Query reference](/docs/services/discovery-icp/query-reference.html#parameter-descriptions).
+The {{site.data.keyword.dcp_long}} service offers powerful content search capabilities through queries. After your content is uploaded and enriched by the {{site.data.keyword.dcp_short}} service, you can build queries, integrate {{site.data.keyword.dcp_short}} into your own projects, or create a custom application by using the {{site.data.keyword.watson}} Explorer Application Builder. To get started with queries, see [Query concepts](/docs/services/discovery-icp?topic=discovery-icp-query-concepts). For the complete list of parameters, see the [Query reference](/docs/services/discovery-icp?topic=discovery-icp-query-ref#parameter-descriptions).
 {: shortdesc}
 
 **Search parameters**
@@ -34,12 +36,12 @@ The **results set** is the group of documents identified by the combined searche
 ## query
 {: #query}
 
-A query search returns all documents in your data set with full enrichments and full text in order of relevance. A query also excludes any documents that do not mention the query content. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html#query-operators).
+A query search returns all documents in your data set with full enrichments and full text in order of relevance. A query also excludes any documents that do not mention the query content. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp?topic=discovery-icp-query-operators).
 
 ## filter
 {: #filter-query-params}
 
-A cacheable query that excludes any documents that do not mention the query content. Filter search results are **not** returned in order of relevance. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html#query-operators).
+A cacheable query that excludes any documents that do not mention the query content. Filter search results are **not** returned in order of relevance. These queries are written by using the [Discovery Query Language](/docs/services/discovery-icp?topic=discovery-icp-query-operators).
 
 ### Differences between the filter and query parameters
 {: #filtervquery}
@@ -49,7 +51,7 @@ If you test the same search term on a small data set, you might find that the `f
 - Using a filter parameter alone returns search results in no specific order.
 - Using a query parameter alone returns search results in order of relevance.
 
-In large data sets, if you need results to be returned in order of relevance,  combine the `filter` and `query` parameters, because using them together improves performance. The `filter` parameter runs first and caches results, then the `query` parameter ranks them. For an example of using filters and queries together, see [Building combined queries](/docs/services/discovery-icp/using.html#building-combined-queries). Filters can also be used in aggregations.
+In large data sets, if you need results to be returned in order of relevance,  combine the `filter` and `query` parameters, because using them together improves performance. The `filter` parameter runs first and caches results, then the `query` parameter ranks them. For an example of using filters and queries together, see [Building combined queries](/docs/services/discovery-icp?topic=discovery-icp-query-concepts#building-combined-queries). Filters can also be used in aggregations.
 
 When you write a query that includes both a `filter`, and an `aggregation` or `query`; the `filter` parameters run first, after which any `aggregation` or `query` parameters run in parallel.
 
@@ -58,7 +60,7 @@ With a simple query, especially on a small data set, `filter` and `query` often 
 ## aggregation
 {: #aggregation}
 
-Aggregation queries return a count of documents matching a set of data values; for example, top keywords. For the full list of aggregation options, see the [Aggregations table](/docs/services/discovery-icp/query-aggregations.html#query-aggregations). These aggregations are written by using the [Discovery Query Language](/docs/services/discovery-icp/query-operators.html#query-operators).
+Aggregation queries return a count of documents matching a set of data values; for example, top keywords. For the full list of aggregation options, see the [Aggregations table](/docs/services/discovery-icp?topic=discovery-icp-query-aggregations). These aggregations are written by using the [Discovery Query Language](/docs/services/discovery-icp?topic=discovery-icp-query-operators).
 
 **Structure parameters**
 

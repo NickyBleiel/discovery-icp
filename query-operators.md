@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-15"
+  years: 2015, 2019
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -20,7 +22,7 @@ lastupdated: "2018-11-15"
 # Query operators
 {: #query-operators}
 
-Operators are the separators between different parts of a query. For the complete list of available operators, see the [Query reference](/docs/services/discovery-icp/query-reference.html#operators).
+Operators are the separators between different parts of a query. For the complete list of available operators, see the [Query reference](/docs/services/discovery-icp?topic=discovery-icp-query-ref#operators).
 
 ## . \[JSON delimiter\]
 {: #delimiter}

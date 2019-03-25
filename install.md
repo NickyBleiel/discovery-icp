@@ -2,7 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-03"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -153,7 +155,7 @@ A PersistentVolume (PV) is a unit of storage in the cluster. In the same way tha
 
 For an overview, see [Persistent Volumes in the Kubernetes documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
-When you install the service, persistent volume claims are created for the components automatically. However, because the preferred storage class for the service is local-storage, you must explicitly create persistent volumes before you install the service. Create 11 persistent volumes, one to accommodate each replica specified in the [system requirements](#sys-reqs) table earlier. See [Creating a PersistentVolume ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_cluster/create_volume.html) for the steps to take to create one.
+When you install the service, persistent volume claims are created for the components automatically. However, because the preferred storage class for the service is local-storage, you must explicitly create persistent volumes before you install the service. Create 11 persistent volumes, one to accommodate each replica specified in the [system requirements](#sys-reqs) table. See [Creating a PersistentVolume ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_cluster/create_volume.html) for the steps to take to create one.
 
 You must be a cluster administrator to create local storage volumes.
 {: note}
@@ -305,10 +307,8 @@ If you do not want to install from the catalog, you can install from the command
 ## Next steps
 {: #next-steps-install}
 
-Use the {{site.data.keyword.dcp_short}} tool to 
-
-- To learn more about the service first, read the [overview](/docs/services/discovery-icp/index.html#wadex-about).
-- To see how it works for yourself, follow the steps in [Getting started](/docs/services/discovery-icp/getting-started.html#gs-api).
+- To learn more about the service first, read the [overview](/docs/services/discovery-icp?topic=discovery-icp-wadex-about).
+- To see how it works for yourself, follow the steps in [Getting started](/docs/services/discovery-icp?topic=discovery-icp-gs-api).
 
 
 

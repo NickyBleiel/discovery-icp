@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -23,17 +25,17 @@ lastupdated: "2019-02-15"
 Before you add your own content to the {{site.data.keyword.dcp_short}} service, you need to configure the service to process the content the way that you want.
 {: shortdesc}
 
-The first step is to configure the basic parameters of the service ([Preparing the service for your documents](/docs/services/discovery-icp/building.html#preparing-the-service-for-your-documents)). This includes creating an environment, then creating one or more collections within that environment. When a collection is created, it is automatically populated with the [default configuration](/docs/services/discovery-icp/building.html#the-default-configuration). If you are happy with the settings in the default configuration, you can proceed to upload your content as described at [Adding content](/docs/services/discovery-icp/adding-content.html#add-content).
+The first step is to configure the basic parameters of the service ([Preparing the service for your documents](#preparing-the-service-for-your-documents)). This includes creating an environment, then creating one or more collections within that environment. When a collection is created, it is automatically populated with the [default configuration](#the-default-configuration). If you are happy with the settings in the default configuration, you can proceed to upload your content as described at [Adding content](/docs/services/discovery-icp?topic=discovery-icp-add-content).
 
-However, you most likely want to specify one or more custom configurations (see [When you need a custom configuration](/docs/services/discovery-icp/building.html#when-you-need-a-custom-configuration)). If this is the case, you need to do the following:
+However, you most likely want to specify one or more custom configurations (see [When you need a custom configuration](#when-you-need-a-custom-configuration)). If this is the case, you need to do the following:
 
--   identify some sample content (documents that are representative of your files)
--   upload the content ([Uploading sample documents](/docs/services/discovery-icp/building.html#uploading-sample-documents))
--   adjust the conversion process ([Converting sample documents](/docs/services/discovery-icp/building.html#converting-sample-documents))
--   define enrichments ([Adding enrichments](/docs/services/discovery-icp/building.html#adding-enrichments))
--   normalize the results ([Normalizing data](/docs/services/discovery-icp/building.html#normalizing-data))
+-   Identify some sample content (documents that are representative of your files)
+-   Upload the content as described in [Uploading sample documents](#uploading-sample-documents)
+-   Adjust the conversion process as described in [Converting sample documents](#converting-sample-documents)
+-   Define enrichments as described in [Adding enrichments](#adding-enrichments)
+-   Normalize the results as described in [Normalizing data](#normalizing-data)
 
-    After you have created your custom configuration, you can upload your documents ([Adding content](/docs/services/discovery-icp/adding-content.html#add-content)).
+    After you have created your custom configuration, you can upload your documents as described in [Adding content](/docs/services/discovery-icp?topic=discovery-icp-add-content).
 
 ## Preparing the service for your documents
 {: #preparing-the-service-for-your-documents}
@@ -54,7 +56,7 @@ To create an environment and private data collection with the {{site.data.keywor
 
     By default, the configuration file is **Default Configuration**. If you have another configuration file available, you can select it, or you can create a new one later and apply it to this collection. You can also select the language of the documents you plan to add to this collection: English (`en`), German (`de`), Spanish (`es`), Arabic (`ar`), Japanese (`ja`), French (`fr`), Italian (`it`), Korean (`ko`), Dutch (`nl`), Chinese (`zh`), or Brazilian Portuguese (`pt-br`). There can be only one language in each of your collections. After you click **Create**, your data collection appears as a tile.
 
-Your environment and data collection are ready! If you want to use the default configuration file, you can start [Adding content](/docs/services/discovery-icp/adding-content.html#add-content) immediately. If you want to customize your {{site.data.keyword.dcp_short}} configuration with conversion settings, do not begin adding documents right now; instead, start creating your [custom configuration file](/docs/services/discovery-icp/building.html#custom-configuration).
+Your environment and data collection are ready! If you want to use the default configuration file, you can start [Adding content](/docs/services/discovery-icp?topic=discovery-icp-add-content) immediately. If you want to customize your {{site.data.keyword.dcp_short}} configuration with conversion settings, do not begin adding documents right now; instead, start creating your [custom configuration file](#custom-configuration).
 
 When documents are uploaded to a data collection, they are converted and enriched by using the configuration file chosen for that collection. If you decide later that you would like to switch a collection to a different configuration file, you can do that, but the documents that have already been uploaded remain converted by the original configuration file. All documents uploaded after switching the configuration file use the new configuration file. If you want the **entire** collection to use the new configuration, you  need to create a new collection, choose that new configuration file, and re-upload all of the documents. The {{site.data.keyword.dcp_short}} service stores the converted text of the documents that you upload. Embedded images in  **Microsoft Word** files are not stored and are not returned in results.
 {: note}
@@ -64,13 +66,13 @@ When documents are uploaded to a data collection, they are converted and enriche
 
 The {{site.data.keyword.dcp_short}} service includes a standard configuration that converts, enriches, and normalize your data without requiring you to manually configure these options.
 
-The default configuration named **Default Configuration** contains enrichments, plus standard document conversions based on font styles and sizes. {{site.data.keyword.dcp_short}} enriches (add cognitive metadata to) the text field of your documents with semantic information collected by the {{site.data.keyword.watson}} enrichment Keyword Extraction. Enrichments are discussed at  [Adding enrichments](/docs/services/discovery-icp/building.html#adding-enrichments).
+The default configuration named **Default Configuration** contains enrichments, plus standard document conversions based on font styles and sizes. {{site.data.keyword.dcp_short}} enriches (add cognitive metadata to) the text field of your documents with semantic information collected by the {{site.data.keyword.watson}} enrichment Keyword Extraction. Enrichments are discussed at [Adding enrichments](#adding-enrichments).
 
--   [Microsoft Word conversion](/docs/services/discovery-icp/building.html#microsoft-word-conversion)
--   [HTML conversion](/docs/services/discovery-icp/building.html#html-conversion)
--   [JSON conversion](/docs/services/discovery-icp/building.html#json-conversion)
+-   [Microsoft Word conversion](#microsoft-word-conversion)
+-   [HTML conversion](#html-conversion)
+-   [JSON conversion](l#json-conversion)
 
-If you want to create a custom configuration, see [Custom configuration](/docs/services/discovery-icp/building.html#custom-configuration).
+If you want to create a custom configuration, see [Custom configuration](#custom-configuration).
 
 ### When you need a custom configuration
 {: #when-you-need-a-custom-configuration}
@@ -79,22 +81,22 @@ Getting the right information out of your content and returning it to your users
 
 -   **I understand that my documents may not be structured in the way the default configuration expects. _How do I know if the default
     settings are right for me?_**
-    -   The easiest way to see if the default works for you is to test it by [Uploading sample documents](/docs/services/discovery-icp/building.html#uploading-sample-documents). If the sample JSON results meet your expectations, then no additional configuration is required.
+    -   The easiest way to see if the default works for you is to test it by [Uploading sample documents](#uploading-sample-documents). If the sample JSON results meet your expectations, then no additional configuration is required.
 
 ## Custom configuration
 {: #custom-configuration}
 
 To create a custom configuration in the {{site.data.keyword.dcp_short}} tooling, open a Private data collection, and on the **Manage Data** screen, click **Switch** next to the name of your **Configuration**. On the **Switch configuration** dialog, click **Create a new configuration**.
 
-After you have named your new configuration file, that name is displayed at the top of the configuration screen. The new configuration file automatically contains the settings and enrichments of the [Default configuration](/docs/services/discovery-icp/building.html#the-default-configuration) file to give you a place to begin.
+After you have named your new configuration file, that name is displayed at the top of the configuration screen. The new configuration file automatically contains the settings and enrichments of the [Default configuration](#the-default-configuration) file to give you a place to begin.
 
 The three steps of customizing a configuration file are **Convert**, **Enrich**, and **Normalize**.
 
-1.  [Converting sample documents](/docs/services/discovery-icp/building.html#converting-sample-documents)
-1.  [Adding enrichments](/docs/services/discovery-icp/building.html#adding-enrichments)
-1.  [Normalizing data](/docs/services/discovery-icp/building.html#normalizing-data)
+1.  [Converting sample documents](#converting-sample-documents)
+1.  [Adding enrichments](#adding-enrichments)
+1.  [Normalizing data](#normalizing-data)
 
-For detailed information about configurations, see the [Configuration reference](/docs/services/discovery-icp/custom-config.html#config-ref).
+For detailed information about configurations, see the [Configuration reference](/docs/services/discovery-icp?topic=discovery-icp-config-ref).
 
 ### Uploading sample documents
 {: #uploading-sample-documents}
@@ -106,7 +108,7 @@ When creating a new configuration file in the {{site.data.keyword.dcp_short}} to
 #### Remember the following items when uploading sample documents:
 
 -   All of your documents are converted to JSON before they are enriched and indexed.
--   Microsoft Word and PDF documents are converted to HTML first, then JSON.
+-   Microsoft Word and PDF documents are converted first to HTML, then to JSON.
 -   HTML documents are converted directly to JSON.
 -   The maximum file size for a sample document is 1MB. Sample documents are stored in your browser's local roaming data folder. To delete your sample documents, click the **Delete** icon.
 
@@ -122,7 +124,7 @@ When creating a new configuration file in the {{site.data.keyword.dcp_short}} to
 
 Converting your sample documents is the process that enables you to  define how each input type is handled. The file type of content that you upload dictates the number of conversion steps that you need to consider.
 
-Before you start, [upload your sample documents](/docs/services/discovery-icp/building.html#uploading-sample-documents) and open a sample document of the file type you want to configure in the right-hand pane.
+Before you start, [upload your sample documents](#uploading-sample-documents) and open a sample document of the file type you want to configure in the right-hand pane.
 
 To work through the Conversion settings, click through the file types.
 
@@ -179,7 +181,7 @@ After making any changes, click **Apply and Save**.
 ## Adding enrichments
 {: #adding-enrichments}
 
-The {{site.data.keyword.dcp_short}} [default configuration](/docs/services/discovery-icp/building.html#the-default-configuration) enriches (add cognitive metadata to) the `text` field of your ingested documents with semantic information collected by the  {{site.data.keyword.watson}} function Keyword Extraction.
+The {{site.data.keyword.dcp_short}} [default configuration](#the-default-configuration) enriches (add cognitive metadata to) the `text` field of your ingested documents with semantic information collected by the  {{site.data.keyword.watson}} function Keyword Extraction.
 
 Other {{site.data.keyword.watson}} enrichments are not currently available in certain plans or environments.
 
@@ -279,12 +281,12 @@ Specify values for the new fields as follows:
 -   `field_name` — The name of the field that will be added to the JSON output.
 -   `CSS_selector_expression` — The CSS selector that is to be run against the input HTML to extract the fields. The expression can have one or more matches.
 
-    Valid CSS selectors are those specified by the [JSoup parser ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://jsoup.org/apidocs/org/jsoup/select/Selector.html){: new_window} and its [selector syntax ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://jsoup.org/cookbook/extracting-data/selector-syntax){: new_window}. A short list is provided at [Common selectors](/docs/services/discovery-icp/building.html#common-selectors).
+    Valid CSS selectors are those specified by the [JSoup parser ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://jsoup.org/apidocs/org/jsoup/select/Selector.html){: new_window} and its [selector syntax ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://jsoup.org/cookbook/extracting-data/selector-syntax){: new_window}. A short list is provided at [Common selectors](#common-selectors).
 -   `field_type` — Either `array` or `string`. If the field type is not specified, it defaults to `array`. Note that type `string` can be enriched, but information stored in an `array` cannot be enriched unless the array's items are first extracted into text fields.
 
 **Warning:** If a CSS selector matches both a parent node and one or more of its children, the text content of the nodes will be duplicated in the JSON output.
 
-**Note:** Field names must meet the restrictions defined in [Field name requirements](/docs/services/discovery-icp/custom-config.html#field_reqs).
+**Note:** Field names must meet the restrictions defined in [Field name requirements](/docs/services/discovery-icp?topic=discovery-icp-config-ref#field_reqs).
 
 The following JSON passage shows the relevant section of the Default Configuration to which you add CSS selector information.
 

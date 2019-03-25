@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -26,17 +28,17 @@ lastupdated: "2019-02-15"
 In this short tutorial, we introduce the {{site.data.keyword.dcp_short}} tooling and go through the process of creating a private data collection and searching it.
 {: shortdesc}
 
-If you prefer to work in the API, see [Getting started with the API](/docs/services/discovery-icp/getting-started.html#gs-api).
+If you prefer to work in the API, see [Getting started with the API](/docs/services/discovery-icp?topic=discovery-icp-gs-api).
 {: tip}
 
 ## Before you begin
 {: #before-you-begin-tool}
 
-You need a service instance to start. An administrator must install the service as described in [Installing and configuring Watson Assistant Discovery Extension](/docs/services/discovery-icp/install.html#install). 
+You need a service instance to start. An administrator must install the service as described in [Installing and configuring Watson Assistant Discovery Extension](/docs/services/discovery-icp?topic=discovery-icp-install).
 
 <!-- Remove the text marked `download` after there's no g-s tab in the catalog dashboard -->
 
-If a {{site.data.keyword.dcp_short}} service instance is already installed, you're all set with these prerequisites. Go to [Step 1](/docs/services/discovery-icp/getting-started-tool.html#launch-the-tooling).
+If a {{site.data.keyword.dcp_short}} service instance is already installed, you're all set with these prerequisites. Proceed to Step 1.
 
 ## Step 1: Launch the tooling
 {: #launch-the-tooling}
@@ -77,6 +79,7 @@ Ingest content into your collection.
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc4.html" download>test-doc4.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>
 1.  Click ![File icon](images/icon_yourData.png)<!-- {width="20" height="20" style="padding-left:5px;padding-right:5px;"} --> and select your collection.
 1.  Click the **Upload documents** button and start uploading the four sample documents: <br />
+<a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc1.html" download>test-doc1.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc2.html" download>test-doc2.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc3.html" download>test-doc3.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc4.html" download>test-doc4.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a>
@@ -97,7 +100,7 @@ Ingest content into your collection.
         1.  Click **Field** and select `text`. Select `contains` for **Operator** and `watson` for **Value**. Click **Add rule**, then repeat your selections, but choose the **Value** of `Slack`. The query `text:watson,text:Slack` is displayed in **Visual Query Builder**.
         1.  Click **Run Query**. The query returns 1 result.
 
-    Click **Edit in query language** to build queries using the Discovery Query Language. To learn more about the Discovery Query Language, see [Query reference](/docs/services/discovery-icp/query-reference.html#query-ref) and [Query concepts](/docs/services/discovery-icp/using.html#query-concepts).
+    Click **Edit in query language** to build queries using the Discovery Query Language. To learn more about the Discovery Query Language, see [Query reference](/docs/services/discovery-icp?topic=discovery-icp-query-ref) and [Query concepts](/docs/services/discovery-icp?topic=discovery-icp-query-concepts).
 1.  The results of your query are displayed in the **Results** section:
     - The **Summary** tab provides an overview of the query results,
     - The **JSON** tab displays the full JSON results.
@@ -107,7 +110,7 @@ Ingest content into your collection.
     The **Query URL** link provided under both the **JSON** and **Summary** tabs is ready-to-use in your application.
 
     Additional resources:
-    - To learn more about the data schema of your documents, go to the **Query Builder** and click the **View Data Schema** icon or on the **JSON** tab. See [The Discovery data schema](/docs/services/discovery-icp/using.html#discovery-schema) for details.
+    - To learn more about the data schema of your documents, go to the **Query Builder** and click the **View Data Schema** icon or on the **JSON** tab. See [The Discovery data schema](/docs/services/discovery-icp?topic=discovery-icp-query-concepts#discovery-schema) for details.
     - If editing in the Discovery Query Language, click on the **?** icons next to any of the **Enter query here** fields for more examples.
 
 ## Next steps

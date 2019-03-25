@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -50,7 +52,7 @@ The following new features and changes to the service are available.
 
 Version 1.0.1 includes the following changes and updates:
 
- - An implementation to back up and restore your data. For more information, see [Backing up and restoring data](/docs/services/discovery-icp/backup.html#backup-restore).
+ - An implementation to back up and restore your data. For more information, see [Backing up and restoring data](/docs/services/discovery-icp?topic=discovery-icp-backup-restore).
  
  - {{site.data.keyword.dcp_short}} is now available in the following 11 languages:
    - Arabic (`ar`)
@@ -89,8 +91,8 @@ The {{site.data.keyword.dcp_long}} service brings the cognitive capabilities of 
 The following known issues apply to the GA release:
 
   - {{site.data.keyword.icpfull_notm}} 3.1.1 and later are not currently supported.
-  - The [API Reference](https://console.bluemix.net/apidocs/discovery-icp) lists methods and parameters that are not currently available on {{site.data.keyword.dcp_short}}. The preceding section lists the supported method endpoints.
-    Additionally, the [API Reference](https://console.bluemix.net/apidocs/discovery-icp) lists `curl` API paths 
+  - The [API Reference](https://{DomainName}/apidocs/discovery-icp) lists methods and parameters that are not currently available on {{site.data.keyword.dcp_short}}. The preceding section lists the supported method endpoints.
+    Additionally, the [API Reference](https://{DomainName}/apidocs/discovery-icp) lists `curl` API paths 
   - {{site.data.keyword.dcp_short}} is currently available only in English (`en`). Some parts of the {{site.data.keyword.dcp_short}} interface, including the tooling, might appear to support non-English languages. If you find a reference to non-English support, disregard it.
   - Disregard references to natural language query in the {{site.data.keyword.dcp_short}} tooling. If you submit a natural language query, the service processes it as a Discovery Query Language request. The results returned by a natural language query are indeterminable.
   - Disregard references to Watson Discovery News in the {{site.data.keyword.dcp_short}} tooling.

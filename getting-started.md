@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -27,17 +29,17 @@ lastupdated: "2019-02-15"
 In this short tutorial, we introduce the {{site.data.keyword.dcp_short}} API and go through the process of creating a private data collection and searching it.
 {: shortdesc}
 
-If you prefer to work in the {{site.data.keyword.dcp_short}} tooling, see [Getting started with the tooling](/docs/services/discovery-icp/getting-started-tool.html#gs-tool).
+If you prefer to work in the {{site.data.keyword.dcp_short}} tooling, see [Getting started with the tooling](/docs/services/discovery-icp?topic=discovery-icp-gs-tool).
 {: tip}
 
 ## Before you begin
 {: #before-you-begin-api}
 
-You need a service instance to start. An administrator must install the service as described in [Installing Watson Assistant Discovery Extension](/docs/services/discovery-icp/install.html#install). 
+You need a service instance to start. An administrator must install the service as described in [Installing Watson Assistant Discovery Extension](/docs/services/discovery-icp?topic=discovery-icp-install). 
 
 <!-- Remove the text marked `download` after there's no g-s tab in the catalog dashboard -->
 
-If a {{site.data.keyword.dcp_short}} service instance is already installed, you're all set with these prerequisites. Go to [Step 1](/docs/services/discovery-icp/getting-started-tool.html#launch-the-tooling).
+If a {{site.data.keyword.dcp_short}} service instance is already installed, you're all set with these prerequisites. Proceed to Step 1.
 
 ## Step 1: Verify the environment
 {: #create-an-environment}
@@ -125,7 +127,7 @@ Download these sample documents:<br />
         ```
         {: pre}
 
-    Alternatively, use one of the SDKs listed in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.bluemix.net/apidocs/discovery-icp){: new_window}:
+    Alternatively, use one of the SDKs listed in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/discovery-icp){: new_window}:
     - Java:
 
       ```java
@@ -206,5 +208,5 @@ curl -u "apikey":"{apikey}" 'https://{cluster_CA_domain}/{deployment_name}/disco
 
 You successfully queried documents in the environment and collection you created. You can now begin customizing your collection by adding more documents and enrichments, and customizing conversion settings.
 
-- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.bluemix.net/apidocs/discovery-icp){: new_window}
-- [Configure your service](/docs/services/discovery-icp/building.html#config-service)
+- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/discovery-icp){: new_window}
+- [Configure your service](/docs/services/discovery-icp?topic=discovery-icp-config-service)

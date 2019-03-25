@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-17"
+  years: 2015, 2019
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -231,7 +233,7 @@ Each field that you want to create is defined by an object as follows:
 
 - `"css_selector" : string` *required* - a CSS selector expression that defines the area of content to be stored in a field.
 - `"type" : string` *required* - The type of field to be created, can be `string`, `date`
-For detailed information, see [Using CSS selectors to extract fields](/docs/services/discovery-icp/building.html#using-css).
+For detailed information, see [Using CSS selectors to extract fields](/docs/services/discovery-icp?topic=discovery-icp-config-service#using-css).
 
 ### JSON
 {: #json}
@@ -349,7 +351,7 @@ The `keywords` enrichment extracts instances of significant words within the tex
 ```
 {:codeblock}
 
-The `operation` object options are listed [here](#operations)
+The `operation` object options are listed in [Operations objects](#operations).
 
 ## Field name requirements
 {: #field_reqs}

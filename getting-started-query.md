@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-20"
+  years: 2015, 2019
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -24,14 +26,14 @@ In this tutorial, we will learn how to write a few different types of queries in
 {: shortdesc}
 
 For more information about writing queries, see:
-- [Query concepts](/docs/services/discovery-icp/using.html#query-concepts)
-- [Query reference](/docs/services/discovery-icp/query-reference.html#query-ref) (includes the list of parameters, operators, and aggregations available in the Discovery Query Language)
+- [Query concepts](/docs/services/discovery-icp?topic=discovery-icp-query-concepts)
+- [Query reference](/docs/services/discovery-icp?topic=discovery-icp-query-ref) (includes the list of parameters, operators, and aggregations available in the Discovery Query Language)
 
 These example queries are built by using the {{site.data.keyword.dcp_short}} tooling. If you'd like to use the API instead, add the query parameters to your API call. For more information and examples, see the Queries section of the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https:/{DomainName}/apidocs/discovery-icp){: new_window}.
 
 ## Before you begin
 
-**Complete the steps in [Getting started](/docs/services/discovery-icp/getting-started-tool.html#gs-tool).** If you haven't completed the **Getting started**, go to the **Manage data** screen, create a new collection named {{site.data.keyword.IBM_notm}} Press Releases, and add these four documents to it:<br />
+**Complete the steps in [Getting started](/docs/services/discovery-icp?topic=discovery-icp-gs-tool).** If you haven't completed the **Getting started**, go to the **Manage data** screen, create a new collection named {{site.data.keyword.IBM_notm}} Press Releases, and add these four documents to it:<br />
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc1.html" download>test-doc1.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc2.html" download>test-doc2.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
 <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/discovery/test-doc3.html" download>test-doc3.html <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon" class="style-scope doc-content"></a><br />
@@ -41,7 +43,7 @@ These example queries are built by using the {{site.data.keyword.dcp_short}} too
 
 Let's start out by getting to know the {{site.data.keyword.dcp_short}} JSON. To understand how to build a query using the Discovery Query Language, it helps to be familiar with the JSON produced by {{site.data.keyword.dcp_short}} after it enriches the documents in your collection.
 
-1.  [Launch the {{site.data.keyword.dcp_short}} tooling](/docs/services/discovery-icp/getting-started-tool.html#launch-the-tooling). On the **Manage data** screen, choose the {{site.data.keyword.IBM_notm}} Press Releases collection.
+1.  [Launch the {{site.data.keyword.dcp_short}} tooling](/docs/services/discovery-icp?topic=discovery-icp-gs-tool#launch-the-tooling). On the **Manage data** screen, choose the {{site.data.keyword.IBM_notm}} Press Releases collection.
 
 1.  To get familiar with the data schema of your documents, let's look at the **View data schema** screen. It displays the fields and values in your transformed documents two ways: by document (**Document view**), or by field (**Collection view**). **Collection view** displays all fields in your collection.
 

@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection="discovery-icp"
 
 ---
 
@@ -20,7 +22,7 @@ lastupdated: "2019-02-15"
 # Query aggregations
 {: #query-aggregations}
 
-Aggregations return a set of data values. For the complete list of available aggregations, see the [Query reference](/docs/services/discovery-icp/query-reference.html#aggregations).
+Aggregations return a set of data values. For the complete list of available aggregations, see the [Query reference](/docs/services/discovery-icp?topic=discovery-icp-query-ref#aggregations).
 
 ## term
 {: #term}
