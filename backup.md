@@ -4,7 +4,7 @@ copyright:
   years: 2019
 lastupdated: "2019-02-15"
 
-subcollection="discovery-icp"
+subcollection: discovery-icp
 
 ---
 

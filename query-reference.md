@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-21"
+lastupdated: "2018-04-01"
 
-subcollection="discovery-icp"
+subcollection: discovery-icp
 
 ---
 
@@ -74,7 +74,7 @@ Operators are the separators between different parts of a query. These are the a
 | [\\](/docs/services/discovery-icp?topic=discovery-icp-query-operators#escape) | Escape character | `title::"Dorothy said: \"There's no place like home\""` |
 | [""](/docs/services/discovery-icp?topic=discovery-icp-query-operators#phrase) | Phrase query | `enriched_text.keywords.text:Watson"` |
 | [(), \[\]](/docs/services/discovery-icp?topic=discovery-icp-query-operators#nestedquery) | Nested grouping | `filter-entities:(text:Turkey,type:Location)` |
-| [<code>&#124;</code>](/docs/services/discovery-icp?topic=discovery-icp-query-operators#or) | or | <code>query-enriched.keywords.text:Google&#124;IBM</code> |
+| [<code>&vert;</code>](/docs/services/discovery-icp?topic=discovery-icp-query-operators#or) | or | `query-enriched.keywords.text:Google&vert;IBM` |
 | [,](/docs/services/discovery-icp?topic=discovery-icp-query-operators#and) | and | `query-enriched.keywords.text:Google,IBM` |
 | [<=, >=, >, <](/docs/services/discovery-icp?topic=discovery-icp-query-operators#comparisons) | Numerical comparisons |  `enriched_text.sentiment.document.score>0.679`     |
 | [^x](/docs/services/discovery-icp?topic=discovery-icp-query-operators#multiplier) | Score multiplier | `text:IBM^3` |
