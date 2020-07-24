@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-21"
+  years: 2015, 2020
+lastupdated: "2020-07-24"
 
 subcollection: discovery-icp
 
 ---
 
 {:shortdesc: .shortdesc}
+{:deprecated: .deprecated}
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:pre: .pre}
@@ -26,6 +27,8 @@ subcollection: discovery-icp
 
 {{site.data.keyword.dcp_long}} makes it possible to rapidly build cognitive, cloud-based exploration applications that unlock actionable insights hidden in unstructured data, including your own proprietary data as well as public and third-party data.
 {: shortdesc}
+
+{{site.data.keyword.dcp_long}} is deprecated. As of 30 August 2020, you cannot provision new instances, and access to free instances will be removed. Any instance that is still provisioned as of 30 August 2020 will be deleted.{: deprecated}
 
 This is the architecture of a complete {{site.data.keyword.dcp_short}} service solution:
 
